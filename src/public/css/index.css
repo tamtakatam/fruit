@@ -1,0 +1,10 @@
+.catalog {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.catalog-top {
+    display: flex;
+    justify-content: space-between;
+    
+}

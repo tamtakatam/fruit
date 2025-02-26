@@ -15,7 +15,7 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table("products")->delete();
+
         $products = [
             [
                 'name' => 'キウイ',
