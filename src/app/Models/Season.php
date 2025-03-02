@@ -11,6 +11,6 @@ class Season extends Model
     use HasFactory;
     public function products()
     {
-        return $this->belongsTo(Product::class)->withTimestamps();
+        return $this->belongsToMany(Product::class)->withTimestamps();
     }
 }

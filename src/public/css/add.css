@@ -37,9 +37,60 @@ input[type="file"] {
     margin-top: 10px;
 }
 
-.season-options label {
-    display: inline-block;
+/* 丸いチェックボックスのカスタムデザイン */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
     margin-right: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+/* デフォルトのチェックボックスを非表示 */
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* チェックボックスの丸いデザイン */
+.custom-checkbox .checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+/* チェックされたときのスタイル */
+.custom-checkbox input:checked+.checkmark {
+    background-color: #ffc107;
+    border: 2px solid #ffc107;
+}
+
+/* チェックマーク（内部の丸） */
+.custom-checkbox .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* チェックされたときにチェックマークを表示 */
+.custom-checkbox input:checked+.checkmark::after {
+    display: block;
 }
 
 .button-group {
